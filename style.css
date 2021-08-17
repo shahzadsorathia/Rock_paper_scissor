@@ -1,54 +1,54 @@
 .mainbody{
-
+   
 }
 
 .heading{
-    
+  
 }
 
 .scoreboard{
-
-}
-
-.playerscore{
-
-}
-
-.computerscore{
+    
 
 }
 
 .p-score{
-
+    text-align: center;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+       
 }
 .c-score{
-    
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
 .choose{
-
+    
 }
 
 .symbols{
-
+   
 }
 
 .rock{
-
+  
 }
 
 .paper{
-
+   
 }
 
 .scissor{
-
+  
 }
 
-.result{
-
+.results{
+    margin-top: 20px;
+	font-size: 1.2rem;
 }
 
 .reload{
-    
+   
 }
+

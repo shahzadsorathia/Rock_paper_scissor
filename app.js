@@ -15,9 +15,9 @@ const maingame = () => {
 
     // function inside a function a start the game 
         playerchoice.forEach(choice => {
-            choice.addEventListener('click', function () {
+            choice.addEventListener('click', function() {
                 // statement to display the result of turns remaining
-                let turnsleft = document.querySelector('.turns');
+                let turnsleft = document.querySelector('.turnsleft');
                 // incrementing one after every play
                 turns++;
                 // subtracting every time  after each play and outputing remaining tunr
@@ -27,7 +27,7 @@ const maingame = () => {
                 let y = computerchoice[x];
 
                 // statement to verify the function and winner
-                winner(this.innertext, x);
+                winner(this.innerText,y);
 
                 // gameover function after 9 moves
                 if (turns == 9) {
@@ -44,7 +44,9 @@ const maingame = () => {
         // psb = player score board
         let psb = document.querySelector('.p-score');
         // csc = computer score board
-        let csb = document.querySelector('c-score');
+        let csb = document.querySelector('.c-score');
+        player = player.toLowerCase();
+        computer = computer.toLowerCase();
 
         // Conditional statement to verify the inputs 
         if ( player === computer){
@@ -57,7 +59,7 @@ const maingame = () => {
                 csb.textContent = csd;
             }
             else{
-                result.textContent = 'Player Won '
+                result.textContent = 'Player Won';
                 psd++; //displaying increment in player's score
                 psb.textContent = psd;
             }

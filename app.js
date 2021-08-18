@@ -20,7 +20,7 @@ const maingame = () => {
                 let turnsleft = document.querySelector('.turnsleft');
                 // incrementing one after every play
                 turns++;
-                // subtracting every time  after each play and outputing remaining tunr
+                // subtracting every time  after each play and outputing remaining turns
                 turnsleft.innerText = `Turns Remaining: ${9 - turns}`;
 
                 let x = Math.floor(Math.random() * 3);
@@ -30,10 +30,9 @@ const maingame = () => {
                 winner(this.innerText,y);
 
                 // gameover function after 9 moves
-                if (turns == 9) {
-                    gameover(playerchoice, turnsleft)
+                if(turns == 9) {
+                    replaygame(playerchoice, turnsleft)
                 }
-
             })// choice braces
         })// playerchoice braces
     }// start game braces
@@ -88,12 +87,36 @@ const maingame = () => {
                 psb.textContent = psd;
             }
         }
+    } // winner function braces
+
+    const replaygame = (playerchoice,turnsleft) =>{
+        let chooseturn = document.querySelector('.turns');
+        let result = document.querySelector('.results');
+        let restartbutton = document.querySelector('.restart');
+
+        playerchoice.forEach(Option => {
+            Option.style.display='none';
+        })
+        chooseturn.innerText='Game Over!'
+        turnsleft.style.display = 'none';
+
+        if(psd > csd){
+            result.style.fontsize = '2rem';
+            result.innerText = 'Player Won the game'
+            result.style.color = '#308D46'
+        }
+
+    restartbutton.innerText='restart';
+    restartbutton.addEventListener('click',() => {
+        window.location.restart();
+    })
 
 
-    }
+    }// replaygame braces
 
+    
     startgame();
 
 }// main function braces
 
-maingame();
+    maingame();

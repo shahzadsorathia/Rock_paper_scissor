@@ -21,7 +21,7 @@ const maingame = () => {
                 // incrementing one after every play
                 turns++;
                 // subtracting every time  after each play and outputing remaining turns
-                turnsleft.innerText = `Turns Remaining: ${9 - turns}`;
+                turnsleft.innerText = `Turns --- Remaining: ${9 - turns}`;
 
                 let x = Math.floor(Math.random() * 3);
                 let y = computerchoice[x];
@@ -30,8 +30,9 @@ const maingame = () => {
                 winner(this.innerText,y);
 
                 // gameover function after 9 moves
-                if(turns == 9) {
-                    replaygame(playerchoice, turnsleft)
+                if(turns == 9) 
+                {
+                    replaygame(playerchoice,turnsleft)
                 }
             })// choice braces
         })// playerchoice braces
@@ -48,7 +49,7 @@ const maingame = () => {
         computer = computer.toLowerCase();
 
         // Conditional statement to verify the inputs 
-        if ( player === computer){
+        if ( psd === computer){
             result.textContent = " TIE..!!!"
         }
         else if(player == 'rock'){
@@ -90,26 +91,23 @@ const maingame = () => {
     } // winner function braces
 
     const replaygame = (playerchoice,turnsleft) =>{
-        let chooseturn = document.querySelector('.turns');
+        let chooseTurn = document.querySelector('.choose');
         let result = document.querySelector('.results');
         let restartbutton = document.querySelector('.restart');
 
-        playerchoice.forEach(Option => {
-            Option.style.display='none';
+        playerchoice.forEach(choice => {
+            choice.style.display='none';
         })
-        chooseturn.innerText='Game Over!'
+        chooseTurn.innerText = 'Game Over!'
         turnsleft.style.display = 'none';
 
-        if(psd > csd){
-            result.style.fontsize = '2rem';
-            result.innerText = 'Player Won the game'
-            result.style.color = '#308D46'
-        }
 
-    restartbutton.innerText='restart';
-    restartbutton.addEventListener('click',() => {
-        window.location.restart();
-    })
+        restartbutton.innerText='Restart';
+        restartbutton.style.display = 'flex';
+    
+        restartbutton.addEventListener('click',() => {
+            window.location.reload();
+        })
 
 
     }// replaygame braces
@@ -119,4 +117,5 @@ const maingame = () => {
 
 }// main function braces
 
-    maingame();
+ 
+maingame();

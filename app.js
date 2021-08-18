@@ -21,7 +21,7 @@ const maingame = () => {
                 // incrementing one after every play
                 turns++;
                 // subtracting every time  after each play and outputing remaining turns
-                turnsleft.innerText = `Turns --- Remaining: ${9 - turns}`;
+                turnsleft.innerText = `Turns Remaining: ${9 - turns}`;
 
                 let x = Math.floor(Math.random() * 3);
                 let y = computerchoice[x];
@@ -49,7 +49,7 @@ const maingame = () => {
         computer = computer.toLowerCase();
 
         // Conditional statement to verify the inputs 
-        if ( psd === computer){
+        if ( player === computer){
             result.textContent = " TIE..!!!"
         }
         else if(player == 'rock'){

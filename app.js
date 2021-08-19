@@ -95,7 +95,7 @@ const maingame = () => {
         let restartbutton = document.querySelector('.restart');
 
         playerchoice.forEach(choice => {
-            choice.style.display = 'none';
+        choice.style.display = 'none';
         })
         chooseTurn.innerText = 'Game Over!'
         turnsleft.style.display = 'none';

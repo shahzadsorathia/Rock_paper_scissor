@@ -7,7 +7,10 @@ margin: 0%;;
     width: 100%;
     background:yellowgreen;
     color: white;  
-    position: absolute;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
     
 }
 .heading{
@@ -39,7 +42,6 @@ margin: 0%;;
     color: blue;
     display: none;    
     cursor: pointer;  
-    margin:50px 50px 50px 750px;
     background: red;
     border-style: solid;
     border-radius: 10px;
@@ -61,15 +63,36 @@ margin: 0%;;
     padding: 0.8em;
     
 }
+.symbols{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 3%;
+}
 .symbols button {    
     width: 150px;
     height: 150px;
     border-radius: 3em;
     cursor: pointer;  
-    margin-right: 400px;
-    padding-top: 125px;
-    margin:50px 50px 50px 350px;
-    margin-right: 400px;
-    padding-top: 125px;
-    margin:50px 50px 50px 350px;
+    display : flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+   
+}
+
+@media (max-width: 600px)
+{
+    .mainBody{
+        height: 100vh;
+        font-size: 1vw;
+    }
+    .symbols button{
+        padding: 5%;
+        width: 100px;
+        height: 100px;
+        margin: 5%;
+        background-size: contain;
+    }
+   
 }

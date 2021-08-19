@@ -13,9 +13,9 @@ const maingame = () => {
         let playerchoice = [rock, paper, scissor];
         let computerchoice = ['rock', 'paper', 'scissor'];
 
-    // function inside a function a start the game 
+        // function inside a function a start the game 
         playerchoice.forEach(choice => {
-            choice.addEventListener('click', function() {
+            choice.addEventListener('click', function () {
                 // statement to display the result of turns remaining
                 let turnsleft = document.querySelector('.turnsleft');
                 // incrementing one after every play
@@ -27,19 +27,18 @@ const maingame = () => {
                 let y = computerchoice[x];
 
                 // statement to verify the function and winner
-                winner(this.innerText,y);
+                winner(this.innerText, y);
 
                 // gameover function after 9 moves
-                if(turns == 9) 
-                {
-                    replaygame(playerchoice,turnsleft)
+                if (turns == 9) {
+                    replaygame(playerchoice, turnsleft)
                 }
             })// choice braces
         })// playerchoice braces
     }// start game braces
 
     // function to check winner
-    const winner =(player, computer) => {
+    const winner = (player, computer) => {
         let result = document.querySelector('.results');
         // psb = player score board
         let psb = document.querySelector('.p-score');
@@ -49,40 +48,40 @@ const maingame = () => {
         computer = computer.toLowerCase();
 
         // Conditional statement to verify the inputs 
-        if ( player === computer){
-            result.textContent = " TIE..!!!"
+        if (player === computer) {
+            result.textContent = " Tie..!!!"
         }
-        else if(player == 'rock'){
-            if(computer == 'paper'){
+        else if (player == 'rock') {
+            if (computer == 'paper') {
                 result.textContent = 'Player Lost';
                 csd++; // displaying increment in computer's score 
                 csb.textContent = csd;
             }
-            else{
+            else {
                 result.textContent = 'Player Won';
                 psd++; //displaying increment in player's score
                 psb.textContent = psd;
             }
         }
-        else if(player == 'scissor'){
-            if(computer == 'rock'){
+        else if (player == 'scissor') {
+            if (computer == 'rock') {
                 result.textContent = 'Player Lost';
                 csd++; // displaying increment in computer's score 
                 csb.textContent = csd;
             }
-            else{
+            else {
                 result.textContent = 'Player Won '
                 psd++; //displaying increment in player's score
                 psb.textContent = psd;
             }
         }
-        else if(player == 'paper'){
-            if(computer == 'scissor'){
+        else if (player == 'paper') {
+            if (computer == 'scissor') {
                 result.textContent = 'Player Lost';
                 csd++; // displaying increment in computer's score 
                 csb.textContent = csd;
             }
-            else{
+            else {
                 result.textContent = 'Player Won '
                 psd++; //displaying increment in player's score
                 psb.textContent = psd;
@@ -90,32 +89,33 @@ const maingame = () => {
         }
     } // winner function braces
 
-    const replaygame = (playerchoice,turnsleft) =>{
+    const replaygame = (playerchoice, turnsleft) => {
         let chooseTurn = document.querySelector('.choose');
         let result = document.querySelector('.results');
         let restartbutton = document.querySelector('.restart');
 
         playerchoice.forEach(choice => {
-            choice.style.display='none';
+            choice.style.display = 'none';
         })
         chooseTurn.innerText = 'Game Over!'
         turnsleft.style.display = 'none';
+        result.style.display='none';
 
-
-        restartbutton.innerText='Restart';
-        restartbutton.style.display = 'flex';
-    
-        restartbutton.addEventListener('click',() => {
+        //Restart Button style
+        restartbutton.innerText = 'Try Again?';
+        restartbutton.style.display = 'grid';
+        // restart button call function
+        restartbutton.addEventListener('click', () => {
             window.location.reload();
         })
 
 
     }// replaygame braces
 
-    
+
     startgame();
 
 }// main function braces
 
- 
+
 maingame();

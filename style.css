@@ -1,52 +1,75 @@
+*{
+margin: 0%;;
+}
 .mainbody{
-   
+    height: 100%;
+    border-style: dotted;
+    width: 100%;
+    background:yellowgreen;
+    color: white;  
+    position: absolute;
+    
 }
-
 .heading{
-  
+    align-items: center;
+    text-align: center;  
 }
-
+.heading h1{
+    font-size: 100px;
+    color: red;
+}
 .scoreboard{
+    color:red; 
+    text-align: center;
+    font-size: 2em;
+    margin: 50px 50px 50px 50px;
+}
+.p-score, .c-score{
+    text-align: center;     
+    margin: 10px 0px 0px 0px; 
+}
+.choose , .turnsleft, .results{
+    color:black;
+    font-size: 50px;
+    text-align: center; 
+}
+.restart {
+    width: 400px;
+    height:100px;
+    color: blue;
+    display: none;    
+    cursor: pointer;  
+    margin:50px 50px 50px 750px;
+    background: red;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 75px;
+}
+
+.rock {
+    background-image: url(images/rock.png);
+    padding: 0.8em;
+  
+}
+.paper {
+    background-image: url(images/paper.png);
+    padding: 0.8em;
+   
+}
+.scissor {
+    background-image: url(images/scissor.png); 
+    padding: 0.8em;
     
-
 }
-
-.p-score{
-  
-       
-}
-.c-score{
- 
-}
-
-.choose{
-    
-}
-
-.symbols{
-   
-}
-
-.rock{
-  
-}
-
-.paper{
-   
-}
-
-.scissor{
-  
-}
-
-.results{
-}
-
-.reload{
-   
-}
-
-
-.restart{
-    display: none;
+.symbols button {    
+    width: 150px;
+    height: 150px;
+    border-radius: 3em;
+    cursor: pointer;  
+    margin-right: 400px;
+    padding-top: 125px;
+    margin:50px 50px 50px 350px;
+    margin-right: 400px;
+    padding-top: 125px;
+    margin:50px 50px 50px 350px;
 }

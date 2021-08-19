@@ -7,11 +7,11 @@ const maingame = () => {
     // child function 
 
     const startgame = () => {
-        let rock = document.querySelector('.rock');
-        let paper = document.querySelector('.paper');
-        let scissor = document.querySelector('.scissor');
-        let playerchoice = [rock, paper, scissor];
-        let computerchoice = ['rock', 'paper', 'scissor'];
+        let Rock = document.querySelector('.Rock');
+        let Paper = document.querySelector('.Paper');
+        let Scissor = document.querySelector('.Scissor');
+        let playerchoice = [Rock, Paper, Scissor];
+        let computerchoice = ['Rock', 'Paper', 'Scissor'];
 
         // function inside a function a start the game 
         playerchoice.forEach(choice => {
@@ -49,40 +49,40 @@ const maingame = () => {
 
         // Conditional statement to verify the inputs 
         if (player === computer) {
-            result.textContent = " Tie..!!!"
+            result.textContent = " Tie..!!! Both of you selected same Symbol"
         }
         else if (player == 'rock') {
             if (computer == 'paper') {
-                result.textContent = 'Player Lost';
+                result.textContent = 'Player Lost Computer Selected: ' + (computer);
                 csd++; // displaying increment in computer's score 
                 csb.textContent = csd;
             }
             else {
-                result.textContent = 'Player Won';
+                result.textContent = 'Player Won Computer Selected: ' + (computer);
                 psd++; //displaying increment in player's score
                 psb.textContent = psd;
             }
         }
         else if (player == 'scissor') {
             if (computer == 'rock') {
-                result.textContent = 'Player Lost';
+                result.textContent = 'Player Lost Computer Selected: ' + (computer);
                 csd++; // displaying increment in computer's score 
                 csb.textContent = csd;
             }
             else {
-                result.textContent = 'Player Won '
+                result.textContent = 'Player Won Computer Selected: ' + (computer)
                 psd++; //displaying increment in player's score
                 psb.textContent = psd;
             }
         }
         else if (player == 'paper') {
             if (computer == 'scissor') {
-                result.textContent = 'Player Lost';
+                result.textContent = 'Player Lost Computer Selected: ' + (computer);
                 csd++; // displaying increment in computer's score 
                 csb.textContent = csd;
             }
             else {
-                result.textContent = 'Player Won '
+                result.textContent = 'Player Won Computer Selected: ' + (computer)
                 psd++; //displaying increment in player's score
                 psb.textContent = psd;
             }

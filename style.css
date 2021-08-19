@@ -1,5 +1,5 @@
 *{
-margin: 0%;;
+    margin: 0;
 }
 .mainbody{
     height: 100%;
@@ -7,11 +7,10 @@ margin: 0%;;
     width: 100%;
     background:yellowgreen;
     color: white;  
- display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .heading{
     align-items: center;
@@ -24,7 +23,7 @@ margin: 0%;;
 .scoreboard{
     color:red; 
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
     margin: 50px 50px 50px 50px;
 }
 .p-score, .c-score{
@@ -33,9 +32,9 @@ margin: 0%;;
 }
 .choose , .turnsleft, .results{
     color:black;
-    font-size: 50px;
-    text-align: center; 
+    font-size: 50px; 
 }
+
 .restart {
     width: 400px;
     height:100px;
@@ -45,54 +44,60 @@ margin: 0%;;
     background: red;
     border-style: solid;
     border-radius: 10px;
-    font-size: 75px;
+    font-size: 75px;    
 }
 
-.rock {
+.restart:hover{
+    border-radius: 5em;
+}
+
+.Rock {
     background-image: url(images/rock.png);
     padding: 0.8em;
-  
 }
-.paper {
+
+.Paper {
     background-image: url(images/paper.png);
     padding: 0.8em;
-   
 }
-.scissor {
+
+.Scissor {
     background-image: url(images/scissor.png); 
-    padding: 0.8em;
-    
+    padding: 0.8em;  
 }
+
 .symbols{
     display: flex;
     justify-content: space-around;
     width: 80%;
     margin: 3%;
 }
+
 .symbols button {    
     width: 150px;
     height: 150px;
-    border-radius: 3em;
+    border-radius: 2em;
     cursor: pointer;  
     display : flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
-   
+    align-items: center;   
 }
 
-@media (max-width: 600px)
-{
-    .mainBody{
-        height: 100vh;
-        font-size: 1vw;
+.symbols button:hover {
+    border-radius: 5em;
+  }
+
+  @media (max-width: 600px){
+      .mainBody{
+          height: 100vh;
+          font-size: 1vw;
     }
     .symbols button{
         padding: 5%;
-        width: 100px;
-        height: 100px;
+        width: 75px;
+        height: 75px;
         margin: 5%;
         background-size: contain;
-    }
-   
-}
+        }   
+  }

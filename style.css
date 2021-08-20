@@ -86,13 +86,14 @@
 
 .symbols button:hover {
     border-radius: 5em;
-  }
+}
 
-  @media (max-width: 600px){
-      .mainBody{
+@media (max-width: 600px){
+    .mainBody{
           height: 100vh;
           font-size: 1vw;
     }
+    
     .symbols button{
         padding: 5%;
         width: 75px;
@@ -100,4 +101,4 @@
         margin: 5%;
         background-size: contain;
         }   
-  }
+    }
